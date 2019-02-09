@@ -1,0 +1,21 @@
+$def with(horoscopos)
+<h3>
+    <a href="/horoscopos">horoscopos</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>horoscopos</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in horoscopos:
+        <tr>
+            <td><a href='/horoscopos/view/$item.id_signo'><img src="$item.ruta_img_signo"></a></td>
+            <td><a href='/horoscopos/edit/$item.id_signo'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/horoscopos/delete/$item.id_signo'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

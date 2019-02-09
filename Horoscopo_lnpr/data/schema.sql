@@ -5,7 +5,8 @@ USE horoscopo_lnpr;
 CREATE TABLE horoscopos(
     id_signo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre_signo   VARCHAR(100)    NOT NULL,
-    descripcion_signo LONGTEXT     NOT NULL
+    descripcion_signo LONGTEXT     NOT NULL,
+    ruta_img_signo  VARCHAR(100)    NOT NULL
 );
 
 

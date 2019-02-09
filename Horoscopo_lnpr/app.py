@@ -1,10 +1,10 @@
-#Author : Salvador Hernandez Mendoza
-#Email  : salvadorhm@gmail.com
-#Twitter: @salvadorhm
+# Author : Salvador Hernandez Mendoza
+# Email  : salvadorhm@gmail.com
+# Twitter: @salvadorhm
 import web
 import application
 
-ssl = False #activate ssl certificate 
+ssl = False  # activate ssl certificate
 
 if ssl == True:
     from web.wsgiserver import CherryPyWSGIServer
@@ -16,11 +16,16 @@ if ssl == True:
     user@host$ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
     '''
-    CherryPyWSGIServer.ssl_certificate = "ssl/server.crt" 
+    CherryPyWSGIServer.ssl_certificate = "ssl/server.crt"
     CherryPyWSGIServer.ssl_private_key = "ssl/server.key"
 
 urls = (
     '/', 'application.controllers.main.index.Index',
+    '/horoscopos', 'application.controllers.horoscopos.index.Index',
+    '/horoscopos/view/(.+)', 'application.controllers.horoscopos.view.View',
+    '/horoscopos/edit/(.+)', 'application.controllers.horoscopos.edit.Edit',
+    '/horoscopos/delete/(.+)', 'application.controllers.horoscopos.delete.Delete',
+    '/horoscopos/insert', 'application.controllers.horoscopos.insert.Insert',
     #'/api_table_name/?', 'application.api.table_name.api_table_name.Api_table_name',
 )
 

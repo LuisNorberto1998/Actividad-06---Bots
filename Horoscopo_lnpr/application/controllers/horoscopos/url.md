@@ -1,0 +1,5 @@
+'/horoscopos', 'application.controllers.horoscopos.index.Index',
+'/horoscopos/view/(.+)', 'application.controllers.horoscopos.view.View',
+'/horoscopos/edit/(.+)', 'application.controllers.horoscopos.edit.Edit',
+'/horoscopos/delete/(.+)', 'application.controllers.horoscopos.delete.Delete',
+'/horoscopos/insert', 'application.controllers.horoscopos.insert.Insert',

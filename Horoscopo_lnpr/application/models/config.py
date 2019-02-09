@@ -1,9 +1,9 @@
 import web
 
 db_host = 'localhost'
-db_name = ''
-db_user = ''
-db_pw = ''
+db_name = 'horoscopo_lnpr'
+db_user = 'horoscopo'
+db_pw = 'horoscopo.2019'
 
 db = web.database(
     dbn='mysql',
