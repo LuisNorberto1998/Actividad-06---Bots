@@ -1,10 +1,12 @@
 $def with(horoscopos)
-<h3>
-    <a href="/horoscopos">horoscopos</a>
-</h3>
-nombre_signo: $horoscopos.nombre_signo <br>
-descripcion_signo: $horoscopos.descripcion_signo <br>
-ruta_img_signo: $horoscopos.ruta_img_signo <br>
-
+<div class='container'>
+    <h3>
+        <a href="/horoscopos">HOROSCOPOS</a>
+    </h3>
+    <h3>Signo:</h3>
+    <h4>$horoscopos.nombre_signo</h4> <br>
+    Descripcion: $horoscopos.descripcion_signo <br><br>
+    <div class="container"><img src=" $horoscopos.ruta_img_signo" class="img-fluid" alt="Responsive image"><br></div>
+</div>
 <br>
 <br>

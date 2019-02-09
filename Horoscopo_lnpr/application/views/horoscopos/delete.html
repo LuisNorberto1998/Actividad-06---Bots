@@ -12,13 +12,13 @@ $if message != None:
     <input type="hidden" name="id_signo" id="id_signo" value="$horoscopos.id_signo" />
 
     <div class="form-group">
-    <label for="nombre_signo">nombre_signo</label>
+    <label for="nombre_signo">Signo</label>
     <input readonly id="nombre_signo" type="text" class="form-control" name="nombre_signo" size="30" value="$horoscopos.nombre_signo"/>
 </div><div class="form-group">
-    <label for="descripcion_signo">descripcion_signo</label>
-    <input readonly id="descripcion_signo" type="text" class="form-control" name="descripcion_signo" size="30" value="$horoscopos.descripcion_signo"/>
+    <label for="descripcion_signo">Descripcion</label>
+    <textarea readonly id="descripcion_signo" type="text" class="form-control" name="descripcion_signo" rows="10" cols="40">$horoscopos.descripcion_signo</textarea>
 </div><div class="form-group">
-    <label for="ruta_img_signo">ruta_img_signo</label>
+    <label for="ruta_img_signo">Imagen</label>
     <input readonly id="ruta_img_signo" type="text" class="form-control" name="ruta_img_signo" size="30" value="$horoscopos.ruta_img_signo"/>
 </div>
 
