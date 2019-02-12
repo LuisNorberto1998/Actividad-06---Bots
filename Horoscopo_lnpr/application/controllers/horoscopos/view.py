@@ -27,4 +27,5 @@ class View:
     def GET(self, id_signo):
         id_signo = config.check_secure_val(str(id_signo)) # HMAC id_signo validate
         result = config.model.get_horoscopos(id_signo) # search for the id_signo data
+        print result
         return config.render.view(result) # render view.html with id_signo data

@@ -34,10 +34,9 @@ def delete_horoscopos(id_signo):
 
 def insert_horoscopos(nombre_signo, descripcion_signo, ruta_img_signo):
     try:
-        ruta_final = (ruta + ruta_img_signo)
         return db.insert('horoscopos', nombre_signo=nombre_signo,
                          descripcion_signo=descripcion_signo,
-                         ruta_img_signo=ruta_final)
+                         ruta_img_signo=ruta_img_signo)
     except Exception as e:
         print "Model insert Error {}".format(e.args)
         print "Model insert Message {}".format(e.message)
@@ -46,11 +45,10 @@ def insert_horoscopos(nombre_signo, descripcion_signo, ruta_img_signo):
 
 def edit_horoscopos(id_signo, nombre_signo, descripcion_signo, ruta_img_signo):
     try:
-        ruta_final = (ruta + ruta_img_signo)
         return db.update('horoscopos', id_signo=id_signo,
                          nombre_signo=nombre_signo,
                          descripcion_signo=descripcion_signo,
-                         ruta_img_signo=ruta_final,
+                         ruta_img_signo=ruta_img_signo,
                          where='id_signo=$id_signo',
                          vars=locals())
     except Exception as e:

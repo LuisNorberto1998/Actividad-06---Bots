@@ -12,7 +12,7 @@ $def with(horoscopos)
     <tbody>
         $for item in horoscopos:
         <tr>
-            <td><a href='/horoscopos/view/$item.id_signo'><img src="$item.ruta_img_signo"  width="130" height="100"></a></td>
+            <td><a href='/horoscopos/view/$item.id_signo'><img src="../../static/images/$item.ruta_img_signo"  width="130" height="100"></a></td>
             <td><a href='/horoscopos/view/$item.id_signo'>$item.nombre_signo</a></td>
             <td><a href='/horoscopos/edit/$item.id_signo'><span class="glyphicon glyphicon-pencil"></span></a></td>
             <td><a href='/horoscopos/delete/$item.id_signo'><span class="glyphicon glyphicon-trash"></span></a></td>
